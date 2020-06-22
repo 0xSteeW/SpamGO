@@ -46,7 +46,7 @@ func main() {
 	err2 := client.Open()
 	if err1 != nil || err2 != nil {
 		fmt.Println("Could not open session")
-		return
+		fmt.Println(err1, err2)
 	}
 	fmt.Println("------------------------")
 	var channelMap map[int]*discordgo.Channel
