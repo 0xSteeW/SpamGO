@@ -60,7 +60,7 @@ func main() {
 			channelMap[channelIndex] = channel
 		}
 		guildMap[guildIndex] = channelMap
-		channelMap = nil
+		channelMap = make(map[int]*discordgo.Channel)
 	}
 	fmt.Println("Please select channels to spam in, separated by a comma. Syntax is the following: GuildNumber-ChannelNumber : 1-12,0-15")
 	spamIn := input(reader)
